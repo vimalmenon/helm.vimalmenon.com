@@ -1,2 +1,14 @@
 namespace: "vimalmenon"
 
+deployments:
+  - name: frontend-vimalmenon-deploy
+    replicas: 1
+    image: vimalsmenon/frontend.vimalmenon.com
+    version: Dev
+    type: fe
+  - name: api-vimalmenon-deploy
+    replicas: 1
+    image: vimalsmenon/api.vimalmenon.com
+    version: Dev
+    type: api
+
