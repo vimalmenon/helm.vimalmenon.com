@@ -1,5 +1,5 @@
 # helm.vimalmenon.com
 
 #### To-Do
-- [ ] Create a common service
+- [ ] Create a common charts
 
