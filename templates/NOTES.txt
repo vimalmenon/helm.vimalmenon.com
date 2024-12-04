@@ -1,0 +1,5 @@
+Resource for VimalMenon.com
+
+Create a namespace
+Namespace : {{ .Values.namespace }}
+
