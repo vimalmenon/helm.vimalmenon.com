@@ -3,9 +3,11 @@ Resource for VimalMenon.com
 Create a namespace:
 Namespace : {{ .Values.namespace }}
 
-Create deployment:
- {{- range $v := .Values.deployments}}
+Create deployments:
+ {{- range $key, $v := .Values.deployments}}
+----------------{{ $key }}----------------------
   - Name: {{ $v.name }}
   - Replicas: {{ $v.replicas }}
+  - Image: {{ $v.image}}:{{ $v.version}}
  {{- end}}
 
