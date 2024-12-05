@@ -1,0 +1,29 @@
+{{- $root := . -}}
+
+{{- range $v := .Values.deployments}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ $v.name }}
+    type: {{ $v.type }}
+  name: {{ $v.name }}
+  namespace: {{ $root.Values.namespace }}
+spec:
+  replicas: {{ $v.replicas }}
+  selector:
+    matchLabels:
+      app: {{ $v.name}}-pod
+      type: {{ $v.type}}
+  template:
+    metadata:
+      labels:
+        app: {{ $v.name}}-pod
+        type: {{ $v.type}}
+    spec:
+      containers:
+      - name: {{ $v.name}}-pod
+        image: {{ $v.image}}:{{ $v.version}}
+---
+{{- end}}
+
