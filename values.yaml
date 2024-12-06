@@ -1,14 +1,31 @@
 namespace: "vimalmenon"
 
-deployments:
-  - name: frontend-vimalmenon-deploy
-    replicas: 1
-    image: vimalsmenon/frontend.vimalmenon.com
-    version: Dev
+services:
+  - name: frontend-vimalmenon-service
+    nodePort: 3000
+  - name: api-vimalmenon-service
+    nodePort: 5000
+
+
+apps:
+  - name: frontend-vimalmenon
     type: fe
-  - name: api-vimalmenon-deploy
-    replicas: 1
-    image: vimalsmenon/api.vimalmenon.com
-    version: Dev
+    deployment:
+      replicas: 1
+      image: vimalsmenon/frontend.vimalmenon.com
+      version: Dev
+    service:
+      targetPort: 3000
+      nodePort: 30000
+  - name: api-vimalmenon
     type: api
+    deployment:
+      replicas: 1
+      image: vimalsmenon/api.vimalmenon.com
+      version: Dev
+    service:
+      targetPort: 8000
+      nodePort: 40000
+
+
 

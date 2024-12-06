@@ -1,29 +1,29 @@
 {{- $root := . -}}
 
-{{- range $v := .Values.deployments}}
+{{- range $v := .Values.apps}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ $v.name }}
+    app: {{ $v.name }}-deploy
     type: {{ $v.type }}
-  name: {{ $v.name }}
+  name: {{ $v.name }}-deploy
   namespace: {{ $root.Values.namespace }}
 spec:
-  replicas: {{ $v.replicas }}
+  replicas: {{ $v.deployment.replicas }}
   selector:
     matchLabels:
       app: {{ $v.name}}-pod
-      type: {{ $v.type}}
+      type: {{ $v.type }}
   template:
     metadata:
       labels:
-        app: {{ $v.name}}-pod
-        type: {{ $v.type}}
+        app: {{ $v.name }}-pod
+        type: {{ $v.type }}
     spec:
       containers:
-      - name: {{ $v.name}}-pod
-        image: {{ $v.image}}:{{ $v.version}}
+      - name: {{ $v.name }}-pod
+        image: {{ $v.deployment.image }}:{{ $v.deployment.version }}
 ---
 {{- end}}
 

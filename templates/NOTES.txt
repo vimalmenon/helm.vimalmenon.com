@@ -4,10 +4,16 @@ Create a namespace:
 Namespace : {{ .Values.namespace }}
 
 Create deployments:
- {{- range $key, $v := .Values.deployments}}
-----------------{{ $key }}----------------------
-  - Name: {{ $v.name }}
-  - Replicas: {{ $v.replicas }}
-  - Image: {{ $v.image}}:{{ $v.version}}
- {{- end}}
+{{- range $key, $v := .Values.apps }}
+----------------{{ add1 $key  }}----------------------
+  - Name: {{ $v.name }}-deploy
+  - Replicas: {{ $v.deployment.replicas }}
+  - Image: {{ $v.deployment.image }}:{{ $v.deployment.version }}
+  - Type: {{ $v.type }}
+{{- end}}
 
+Create Services:
+{{- range $key, $v := .Values.services }}
+----------------{{ add1 $key  }}----------------------
+  - Name: {{ $v.name }}
+{{- end}}
