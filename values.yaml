@@ -8,6 +8,7 @@ apps:
       image: vimalsmenon/frontend.vimalmenon.com
       version: Dev
       imagePullPolicy: Always
+      port: 3000
     service:
       type: NodePort
       targetPort: 3000
@@ -19,6 +20,7 @@ apps:
       image: vimalsmenon/api.vimalmenon.com
       version: Dev
       imagePullPolicy: Always
+      port: 8000
     service:
       type: NodePort
       targetPort: 8000
