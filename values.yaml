@@ -7,6 +7,7 @@ apps:
       replicas: 1
       image: vimalsmenon/frontend.vimalmenon.com
       version: Dev
+      imagePullPolicy: Always
     service:
       type: NodePort
       targetPort: 3000
@@ -17,6 +18,7 @@ apps:
       replicas: 1
       image: vimalsmenon/api.vimalmenon.com
       version: Dev
+      imagePullPolicy: Always
     service:
       type: NodePort
       targetPort: 8000
