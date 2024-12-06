@@ -7,6 +7,7 @@ K8S resources for vimalmenon.com
 - [ ] Linting for Helm
 - [ ] Create ClusterIp service
 - [ ] Create ingress for API's
+- [ ] Create ingress controller
 - [ ] Try ArgoCD
 
 
