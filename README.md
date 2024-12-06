@@ -27,3 +27,7 @@ Undeploy the app
 ```sh
 helm uninstall vimalmenon
 ```
+Get ArgoCD Password
+```sh
+k get secrets/argocd-initial-admin-secret -n argocd --template={{.data.password}}| base64 -d
+```
