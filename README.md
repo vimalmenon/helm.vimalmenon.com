@@ -3,7 +3,6 @@ K8S resources for vimalmenon.com
 
 
 #### To-Do
-- [ ] Remove helm folder from both FE and API
 - [ ] Deploy the helm chart to CIVO
 - [ ] Linting for Helm
 - [ ] Create ClusterIp service
