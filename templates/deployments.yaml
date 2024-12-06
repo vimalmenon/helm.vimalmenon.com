@@ -6,7 +6,7 @@ kind: Deployment
 metadata:
   labels:
     app: {{ $v.name }}-deploy
-    type: {{ $v.type }}
+    tyre: {{ $v.tyre }}
   name: {{ $v.name }}-deploy
   namespace: {{ $root.Values.namespace }}
 spec:
@@ -14,12 +14,12 @@ spec:
   selector:
     matchLabels:
       app: {{ $v.name}}-pod
-      type: {{ $v.type }}
+      tyre: {{ $v.tyre }}
   template:
     metadata:
       labels:
         app: {{ $v.name }}-pod
-        type: {{ $v.type }}
+        tyre: {{ $v.tyre }}
     spec:
       containers:
       - name: {{ $v.name }}-pod

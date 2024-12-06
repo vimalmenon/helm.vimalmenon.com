@@ -9,11 +9,14 @@ Create deployments:
   - Name: {{ $v.name }}-deploy
   - Replicas: {{ $v.deployment.replicas }}
   - Image: {{ $v.deployment.image }}:{{ $v.deployment.version }}
-  - Type: {{ $v.type }}
+  - Tyre: {{ $v.tyre }}
 {{- end}}
 
 Create Services:
-{{- range $key, $v := .Values.services }}
+{{- range $key, $v := .Values.apps }}
 ----------------{{ add1 $key  }}----------------------
   - Name: {{ $v.name }}
+  - Type: {{ $v.service.type }}
+  - TargetPort: {{ $v.service.targetPort }}
+  - NodePort: {{ $v.service.nodePort }}
 {{- end}}

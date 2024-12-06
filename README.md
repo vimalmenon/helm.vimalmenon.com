@@ -18,5 +18,11 @@ Delete minikube profile
 ```sh
 minikube delete -p vimalmenon
 ```
-
-
+Deploy the app
+```sh
+helm install vimalmenon .
+```
+Undeploy the app
+```sh
+helm uninstall vimalmenon
+```
