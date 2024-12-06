@@ -3,6 +3,7 @@ namespace: "vimalmenon"
 apps:
   - name: frontend-vimalmenon
     tyre: frontend
+    port: 3000
     deployment:
       replicas: 1
       image: vimalsmenon/frontend.vimalmenon.com
@@ -15,6 +16,7 @@ apps:
       nodePort: 30000
   - name: api-vimalmenon
     tyre: api
+    port: 8000
     deployment:
       replicas: 1
       image: vimalsmenon/api.vimalmenon.com
