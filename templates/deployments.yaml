@@ -26,7 +26,7 @@ spec:
         image: {{ $v.deployment.image }}:{{ $v.deployment.version }}
         imagePullPolicy: {{ $v.deployment.imagePullPolicy }}
         ports:
-          - containerPort: {{ $v.deployment.port }}
+        - containerPort: {{ $v.port }}
 ---
 {{- end}}
 
