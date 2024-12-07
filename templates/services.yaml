@@ -19,14 +19,3 @@ spec:
 ---
 {{- end }}
 
-apiVersion: v1
-kind: Service
-metadata:
-  name: argo-cd-server
-  namespace: {{ .Values.namespace }}
-spec:
-  type: ExternalName
-  externalName: argocd-server.argocd.svc.cluster.local
----
-
-
