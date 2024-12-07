@@ -5,9 +5,11 @@ K8S resources for vimalmenon.com
 #### To-Do
 - [ ] Deploy the helm chart to Civo
 - [ ] Ingress for Civo
+- [ ] Ingress controller for Civo
 - [ ] Linting for Helm
 - [ ] Create branch on push to main
 - [ ] Manage secrets in ArgoCD
+- [ ] Setup grafana
 
 
 #### Command
