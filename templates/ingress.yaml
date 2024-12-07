@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: vimalmenon-ingress
+  namespace: {{ .Values.namespace }}
 spec:
   ingressClassName: nginx
   rules:
@@ -11,7 +12,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/*"
+        path: "/"
         backend:
           service:
             name: {{ $v.name }}-service
