@@ -16,6 +16,6 @@ spec:
           service:
             name: {{ $v.name }}-service
             port:
-              number: 80
+              number: {{ $v.port }}
 {{- end }}
 
