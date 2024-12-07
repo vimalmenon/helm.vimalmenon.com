@@ -8,6 +8,7 @@ K8S resources for vimalmenon.com
 - [ ] Ingress controller for Civo
 - [ ] Linting for Helm
 - [ ] Create branch on push to main
+- [ ] Add ArgoCD to Ingress
 - [ ] Manage secrets in ArgoCD
 - [ ] Setup grafana
 
