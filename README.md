@@ -29,6 +29,10 @@ Undeploy the app
 ```sh
 helm uninstall vimalmenon
 ```
+Enable ingress
+```sh
+minikube addons enable ingress -p vimalmenon
+```
 Get ArgoCD Password
 ```sh
 kubectl get secrets/argocd-initial-admin-secret -n argocd --template={{.data.password}}| base64 -d

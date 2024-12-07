@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vimalmenon-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+{{- $root := . -}}
+{{- range $v := .Values.apps}}
+  - host: {{ $v.ingress.url}}
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/*"
+        backend:
+          service:
+            name: {{ $v.name }}-service
+            port:
+              number: 80
+{{- end }}
+
