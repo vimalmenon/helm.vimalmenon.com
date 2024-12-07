@@ -33,6 +33,14 @@ Enable ingress
 ```sh
 minikube addons enable ingress -p vimalmenon
 ```
+Enable ingress-dns
+```sh
+minikube addons enable ingress-dns -p vimalmenon
+```
+Minikube Tunnel
+```sh
+minikube tunnel
+```
 Get ArgoCD Password
 ```sh
 kubectl get secrets/argocd-initial-admin-secret -n argocd --template={{.data.password}}| base64 -d
