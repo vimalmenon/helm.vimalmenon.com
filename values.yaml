@@ -14,7 +14,8 @@ apps:
       targetPort: 3000
       nodePort: 30000
     ingress:
-      url: vimalmenon.com
+      url: vimalmenon.co
+      port: 80
   - name: api-vimalmenon
     tyre: api
     port: 8000
