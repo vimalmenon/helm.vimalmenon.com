@@ -9,6 +9,7 @@ K8S resources for vimalmenon.com
 - [ ] Create ingress for API's
 - [ ] Create ingress controller
 - [ ] Try ArgoCD
+- [ ] Create branch on push to main
 
 
 #### Command

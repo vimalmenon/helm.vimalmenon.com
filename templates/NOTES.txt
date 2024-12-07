@@ -16,7 +16,6 @@ Create Services:
 {{- range $key, $v := .Values.apps }}
 ----------------{{ add1 $key  }}----------------------
   - Name: {{ $v.name }}
-  - Type: {{ $v.service.type }}
-  - TargetPort: {{ $v.service.targetPort }}
-  - NodePort: {{ $v.service.nodePort }}
+  - Type: ClusterIp
+  - Port: {{ $v.port }}
 {{- end}}
