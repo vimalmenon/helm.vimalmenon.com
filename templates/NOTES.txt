@@ -16,6 +16,13 @@ Create Services:
 {{- range $key, $v := .Values.apps }}
 ----------------{{ add1 $key  }}----------------------
   - Name: {{ $v.name }}
-  - Type: ClusterIp
+  - Type: {{ $v.service.type }}
   - Port: {{ $v.port }}
+{{- end}}
+
+Create Ingress:
+{{- range $key, $v := .Values.apps }}
+----------------{{ add1 $key  }}----------------------
+ - Url: {{ $v.ingress.url }}
+ - Port: {{ $v.ingress.port }}
 {{- end}}
