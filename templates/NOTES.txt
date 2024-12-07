@@ -23,5 +23,6 @@ Create Services:
 Create Ingress:
 {{- range $key, $v := .Values.apps }}
 ----------------{{ add1 $key  }}----------------------
- - Url: $v.ingress.url
+ - Url: {{ $v.ingress.url }}
+ - Port: {{ $v.ingress.port }}
 {{- end}}

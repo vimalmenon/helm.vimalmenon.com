@@ -27,4 +27,5 @@ apps:
       type: ClusterIp
     ingress:
       url: api.vimalmenon.com
+      port: 80
 
