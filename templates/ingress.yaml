@@ -19,4 +19,14 @@ spec:
             port:
               number: {{ $v.port }}
 {{- end }}
+  - host: argo.vimalmenon.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: argo-cd-server
+            port:
+              number: 80
 
