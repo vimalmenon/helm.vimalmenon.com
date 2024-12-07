@@ -3,13 +3,11 @@ K8S resources for vimalmenon.com
 
 
 #### To-Do
-- [ ] Deploy the helm chart to CIVO
+- [ ] Deploy the helm chart to Civo
+- [ ] Ingress for Civo
 - [ ] Linting for Helm
-- [ ] Create ClusterIp service
-- [ ] Create ingress for API's
-- [ ] Create ingress controller
-- [ ] Try ArgoCD
 - [ ] Create branch on push to main
+- [ ] Manage secrets in ArgoCD
 
 
 #### Command
@@ -39,7 +37,7 @@ minikube addons enable ingress-dns -p vimalmenon
 ```
 Minikube Tunnel
 ```sh
-minikube tunnel
+minikube tunnel -p vimalmenon
 ```
 Get ArgoCD Password
 ```sh
