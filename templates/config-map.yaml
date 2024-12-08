@@ -1,0 +1,13 @@
+{{- $root := . -}}
+
+{{- range $v := .Values.apps}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $v.name }}-config-map
+  namespace: {{ $root.namespace }}
+data:
+  {{- $v.configMap | toYaml | nindent 2 }}
+---
+{{- end}}
+

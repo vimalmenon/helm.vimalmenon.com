@@ -1,4 +1,5 @@
 namespace: "vimalmenon"
+env: Local
 
 apps:
   - name: frontend-vimalmenon
@@ -15,7 +16,8 @@ apps:
       url: vimalmenon.local
       port: 80
     configMap:
-      env: Local
+      NEXT_PUBLIC_ENV: Local
+      NEXT_PUBLIC_API: http://api.vimalmenon.local
   - name: api-vimalmenon
     tyre: api
     port: 8000
@@ -30,5 +32,5 @@ apps:
       url: api.vimalmenon.local
       port: 80
     configMap:
-      env: Local
+      ENV: Local
 
