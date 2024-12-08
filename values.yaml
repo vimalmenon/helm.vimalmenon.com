@@ -10,12 +10,12 @@ apps:
       version: Dev
       imagePullPolicy: Always
     service:
-      type: NodePort
-      targetPort: 3000
-      nodePort: 30000
+      type: ClusterIp
     ingress:
       url: vimalmenon.local
       port: 80
+    configMap:
+      env: Local
   - name: api-vimalmenon
     tyre: api
     port: 8000
@@ -29,4 +29,6 @@ apps:
     ingress:
       url: api.vimalmenon.local
       port: 80
+    configMap:
+      env: Local
 
