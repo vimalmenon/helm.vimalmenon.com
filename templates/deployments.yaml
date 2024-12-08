@@ -27,6 +27,9 @@ spec:
         imagePullPolicy: {{ $v.deployment.imagePullPolicy }}
         ports:
         - containerPort: {{ $v.port }}
+        envFrom:
+        - configMapRef:
+            name: {{ $v.name }}-config-map
 ---
 {{- end}}
 
