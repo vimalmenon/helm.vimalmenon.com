@@ -45,5 +45,5 @@ minikube tunnel -p vimalmenon
 ```
 Get ArgoCD Password
 ```sh
-kubectl get secrets/argocd-initial-admin-secret -n argocd --template={{.data.password}}| base64 -d
+kubectl get secrets/argocd-initial-admin-secret -n argocd --template={{.data.password}}| base64 -d | pbcopy
 ```
