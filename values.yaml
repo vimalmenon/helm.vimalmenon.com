@@ -8,7 +8,6 @@ apps:
     deployment:
       replicas: 1
       image: vimalsmenon/frontend.vimalmenon.com
-      version: Dev
       imagePullPolicy: Always
     service:
       type: ClusterIp
@@ -24,7 +23,6 @@ apps:
     deployment:
       replicas: 1
       image: vimalsmenon/api.vimalmenon.com
-      version: Dev
       imagePullPolicy: Always
     service:
       type: ClusterIp

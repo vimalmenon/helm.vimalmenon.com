@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: {{ $v.name }}-pod
-        image: {{ $v.deployment.image }}:{{ $v.deployment.version }}
+        image: {{ $v.deployment.image }}:{{ $root.env }}
         imagePullPolicy: {{ $v.deployment.imagePullPolicy }}
         ports:
         - containerPort: {{ $v.port }}
