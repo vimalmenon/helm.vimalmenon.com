@@ -13,6 +13,9 @@ K8S resources for vimalmenon.com
 - [ ] Setup grafana
 - [ ] Setup K8S in PI
 - [ ] Find a way to deploy different env
+- [ ] Create Config Map
+- [ ] Create Secret
+
 
 #### Command
 Start a minikube cluster with a profile
