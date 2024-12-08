@@ -11,6 +11,7 @@ K8S resources for vimalmenon.com
 - [ ] Add ArgoCD to Ingress
 - [ ] Manage secrets in ArgoCD
 - [ ] Setup grafana
+- [ ] Setup K8S in PI
 
 
 #### Command
