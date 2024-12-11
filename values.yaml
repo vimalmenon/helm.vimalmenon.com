@@ -16,7 +16,7 @@ apps:
       port: 80
     configMap:
       NEXT_PUBLIC_ENV: Local
-      NEXT_PUBLIC_API: http://api.vimalmenon.local
+      NEXT_PUBLIC_API: http://api-vimalmenon-service
   - name: api-vimalmenon
     tyre: api
     port: 8000
