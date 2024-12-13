@@ -1,6 +1,8 @@
 namespace: "vimalmenon"
 env: Local
 
+namespaceOverride: "monitoring"
+
 apps:
   - name: frontend-vimalmenon
     tyre: frontend
