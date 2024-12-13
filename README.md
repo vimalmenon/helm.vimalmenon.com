@@ -11,7 +11,8 @@ K8S resources for vimalmenon.com
 - [ ] Create branch on push to main
 - [ ] Add ArgoCD to Ingress
 - [ ] Manage secrets in ArgoCD
-- [ ] Setup grafana
+- [ ] Create sealed secret
+- [ ] Setup grafana and promitius
 - [ ] Setup K8S in PI
 - [ ] Find a way to deploy different env
 - [ ] Create Secret
