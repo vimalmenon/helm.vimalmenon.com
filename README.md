@@ -12,7 +12,7 @@ K8S resources for vimalmenon.com
 - [ ] Add ArgoCD to Ingress
 - [ ] Manage secrets in ArgoCD
 - [ ] Create sealed secret
-- [ ] Setup grafana and promitius
+- [ ] Setup grafana and prometheus
 - [ ] Setup K8S in PI
 - [ ] Find a way to deploy different env
 - [ ] Create Secret
